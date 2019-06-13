@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>vuex 测试</h1>
-    Clicked: {{ getCount }} times
+    <h1>开发中...</h1>
+    <!-- Clicked: {{ getCount }} times
     <button @click="increment">+</button>
-    <button @click="decrement">-</button>
+    <button @click="decrement">-</button> -->
   </div>
 </template>
 

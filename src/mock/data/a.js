@@ -1,7 +1,7 @@
 import Mock from 'mockjs';
 const a = [];
 
-for (let i = 0; i < 86; i++) {
+for (let i = 0; i < 25; i++) {
   a.push(Mock.mock({
     id: Mock.Random.id(),
     companyCode:Mock.mock('@string()'),

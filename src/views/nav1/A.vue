@@ -17,18 +17,24 @@
 
     <!--列表-->
     <el-table
+     ref="aTable"
       :data="aData"
       class="tb-edit"
       style="width: 100%"
+      v-loading="listLoading"
       highlight-current-row
       height="550"
       border
     >
+      <!-- <el-table-column
+      type="selection"
+      width="55">
+    </el-table-column> -->
       <el-table-column label="销项涉税规则维护" align="center" width="180">
         <el-table-column type="index" width="80" ></el-table-column>
         <el-table-column label="id" width="180">
           <template scope="scope">
-            <span>{{scope.row.id}}</span>
+            <span v-bind:style="{ color: getIdColor(scope.row.state)}">{{scope.row.id}}</span>
           </template>
         </el-table-column>
         <el-table-column label="公司编码" width="180">
@@ -37,7 +43,6 @@
               size="small"
               v-model="scope.row.companyCode"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.companyCode}}</span>
           </template>
@@ -48,7 +53,6 @@
               size="small"
               v-model="scope.row.companyName"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.companyName}}</span>
           </template>
@@ -59,7 +63,6 @@
               size="small"
               v-model="scope.row.code"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.code}}</span>
           </template>
@@ -70,7 +73,6 @@
               size="small"
               v-model="scope.row.name"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.name}}</span>
           </template>
@@ -135,7 +137,6 @@
               size="small"
               v-model="scope.row.kpgz"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.kpgz}}</span>
           </template>
@@ -147,7 +148,6 @@
               size="small"
               v-model="scope.row.goodsCode"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.goodsCode}}</span>
           </template>
@@ -159,7 +159,6 @@
               size="small"
               v-model="scope.row.goodsName"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.goodsName}}</span>
           </template>
@@ -171,7 +170,6 @@
               size="small"
               v-model="scope.row.rowIndex"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.rowIndex}}</span>
           </template>
@@ -183,7 +181,6 @@
               size="small"
               v-model="scope.row.tableName"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.tableName}}</span>
           </template>
@@ -195,7 +192,6 @@
               size="small"
               v-model="scope.row.isEnable"
               placeholder="请输入内容"
-              @change="handleEdit(scope.$index, scope.row)"
             ></el-input>
             <span>{{scope.row.isEnable}}</span>
           </template>
@@ -263,11 +259,24 @@ export default {
         })
         .catch(() => {});
     },
-    handleAdd: function() {}
+    handleAdd: function() {
+      this.aData.splice(0, 0, {id:`新增`,state:"new"});
+      //this.$refs.aTable.setCurrentRow(this.aData[0]);
+    }, getIdColor: function (state) {
+      let color ='black';
+      switch  (state){
+        case 'new': color ='red';
+         break;
+         case 'modify':color ='yellow'
+         break;
+        default: break;
+      }
+      return color;
+    }
   },
   mounted() {
     this.loadData();
-  }
+  } 
 };
 </script>
 
