@@ -13,7 +13,7 @@ import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
-
+import mainTable from './views/nssb/mainTable.vue'
 let routes = [
     {
         path: '/login',
@@ -166,7 +166,7 @@ let routes = [
         name: '纳税申报',
         iconCls: 'fa fa-bar-chart',
         children: [
-            { path: '/t1', component: echarts, name: '主表' },
+            { path: '/t1', component: mainTable, name: '主表' },
             { path: '/t2', component: echarts, name: '附表一' },
             { path: '/t3', component: echarts, name: '附表二' },
             { path: '/t4', component: echarts, name: '附表三' },
