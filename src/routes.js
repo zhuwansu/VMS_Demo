@@ -160,17 +160,6 @@ let routes = [
             { path: '/aaa', component: Page4, name: '代缴代缴申报管理' } ,
         ]
     },
-    
-    // {
-    //     path: '/',
-    //     component: Home,
-    //     name: '',
-    //     iconCls: 'fa fa-address-card',
-    //     leaf: true,//只有一个节点
-    //     children: [
-    //         { path: '/page6', component: Page6, name: '进项税管理' }
-    //     ]
-    // },
     {
         path: '/',
         component: Home,

@@ -12,6 +12,9 @@
         <el-form-item>
           <el-button size="primary" @click="handleAdd">新增</el-button>
         </el-form-item>
+        <el-form-item>
+          <el-button size="primary" @click="handleSave">保存</el-button>
+        </el-form-item>
       </el-form>
     </el-col>
 
@@ -209,7 +212,7 @@
 <script>
 import util from "../../common/js/util";
 //import NProgress from 'nprogress'
-import { getA, removeA, addA, editA } from "../../api/api";
+import { getA, removeA, addA, editA,saveA } from "../../api/api";
 
 export default {
   data() {
@@ -251,18 +254,25 @@ export default {
           removeA(para).then(res => {
             this.listLoading = false;
             this.$message({
-              message: "删除成功",
+              message:res.msg,
               type: "success"
             });
             this.loadData();
           });
-        })
-        .catch(() => {});
+        }).catch(() => {});
     },
     handleAdd: function() {
       this.aData.splice(0, 0, {id:`新增`,state:"new"});
-      //this.$refs.aTable.setCurrentRow(this.aData[0]);
-    }, getIdColor: function (state) {
+    }, 
+    handleSave:function (){
+          saveA(this.aData).then((res)=>{
+            this.$message({
+              message: res.msg,
+              type: "success"
+            });
+          });
+    },
+    getIdColor: function (state) {
       let color ='black';
       switch  (state){
         case 'new': color ='red';

@@ -24,7 +24,7 @@
 			<aside :class="collapsed?'menu-collapsed':'menu-expanded'">
 				<!--导航菜单-->
 				<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
-					 unique-opened router v-show="!collapsed">
+					 unique-opened router v-show="!collapsed" v-bind:style="{ width: collapsed?'64px':'270px'}">
 					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
 						<el-submenu :index="index+''" v-if="!item.leaf">
 							<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
@@ -76,7 +76,7 @@
 		data() {
 			return {
 				sysName:'VMS',
-				collapsed:false,
+				collapsed:true,
 				sysUserName: '',
 				sysUserAvatar: '',
 				form: {
@@ -186,7 +186,7 @@
 				}
 			}
 			.logo-width{
-				width:230px;
+				width:270px;
 			}
 			.logo-collapse-width{
 				width:60px
@@ -207,8 +207,8 @@
 			bottom: 0px;
 			overflow: hidden;
 			aside {
-				flex:0 0 230px;
-				width: 230px;
+				flex:0 0 270px;
+				width: 270px;
 				// position: absolute;
 				// top: 0px;
 				// bottom: 0px;
@@ -236,8 +236,8 @@
 				width: 60px;
 			}
 			.menu-expanded{
-				flex:0 0 230px;
-				width: 230px;
+				flex:0 0 270px;
+				width: 270px;
 			}
 			.content-container {
 				// background: #f1f2f7;

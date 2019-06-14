@@ -212,5 +212,17 @@ export default {
         }, 500);
       });
     });
+    mock.onGet('/a/save').reply(config => {
+      let { id } = config.params;
+      _A = _A.filter(u => id!==u.id);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve([200, {
+            code: 200,
+            msg: '保存成功'
+          }]);
+        }, 500);
+      });
+    });
   }
 };

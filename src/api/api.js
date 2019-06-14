@@ -20,3 +20,4 @@ export const getA = params => { return axios.get(`${base}/a/get`, { params: para
 export const addA = params => { return axios.get(`${base}/a/add`, { params: params }); };
 export const removeA = params => { return axios.get(`${base}/a/del`, { params: params }); };
 export const editA = params => { return axios.get(`${base}/a/edit`, { params: params }); };
+export const saveA = params => { return axios.get(`${base}/a/save`, { params: params }); };
