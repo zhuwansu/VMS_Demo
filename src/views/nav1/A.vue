@@ -4,7 +4,7 @@
     <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
       <el-form :inline="true" :model="filters">
         <el-form-item>
-          <el-input v-model="filters.name" placeholder="姓名"></el-input>
+          <el-input v-model="filters.name" placeholder="公司名称"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" v-on:click="loadData">查询</el-button>
@@ -253,8 +253,9 @@ export default {
           let para = { id: row.id };
           removeA(para).then(res => {
             this.listLoading = false;
+            debugger;
             this.$message({
-              message:res.msg,
+              message:res.data.msg,
               type: "success"
             });
             this.loadData();
@@ -267,7 +268,7 @@ export default {
     handleSave:function (){
           saveA(this.aData).then((res)=>{
             this.$message({
-              message: res.msg,
+              message: res.data.msg,
               type: "success"
             });
           });

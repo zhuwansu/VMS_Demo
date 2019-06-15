@@ -156,7 +156,7 @@ export default {
     mock.onGet('/a/get').reply(config => {
       let { page, name } = config.params;
       let res = _A.filter(x => {
-        if (name && x.name.indexOf(name) == -1) return false;
+        if (name && x.companyName.indexOf(name) == -1) return false;
         return true;
       });
       let total = res.length;
