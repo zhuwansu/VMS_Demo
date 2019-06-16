@@ -136,11 +136,11 @@
 
         <el-table-column label="开票规则" width="180">
           <template scope="scope">
-            <el-input
-              size="small"
-              v-model="scope.row.kpgz"
-              placeholder="请输入内容"
-            ></el-input>
+            <el-select v-model="scope.row.kpgz" placeholder="请选择开票规则">
+      			<el-option label="不开票" value="不开票" ></el-option>
+      			<el-option label="增值税专用发票"  value="增值税专用发票" ></el-option>
+      			<el-option label="增值税普通发票"  value="增值税普通发票" ></el-option>
+    		</el-select>
             <span>{{scope.row.kpgz}}</span>
           </template>
         </el-table-column>
@@ -191,11 +191,10 @@
 
         <el-table-column label="是否启用" width="180">
           <template scope="scope">
-            <el-input
-              size="small"
-              v-model="scope.row.isEnable"
-              placeholder="请输入内容"
-            ></el-input>
+              <el-select v-model="scope.row.isEnable" placeholder="请选择是否即征即退">
+      			<el-option label="是" value="是" ></el-option>
+      			<el-option label="否"  value="否" ></el-option>
+    		</el-select>
             <span>{{scope.row.isEnable}}</span>
           </template>
         </el-table-column>

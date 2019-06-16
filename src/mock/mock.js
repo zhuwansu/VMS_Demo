@@ -184,9 +184,9 @@ export default {
     mock.onGet('/a/edit').reply(config => {
       _A.some(u => {
         if (u.id === id) {
-          for(var o in u){
+          for (var o in u) {
             let tag = config.params[o];
-            if(tag)u[o]=tag;
+            if (tag) u[o] = tag;
           }
           return true;
         }
@@ -202,7 +202,7 @@ export default {
     });
     mock.onGet('/a/del').reply(config => {
       let { id } = config.params;
-      _A = _A.filter(u => id!==u.id);
+      _A = _A.filter(u => id !== u.id);
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve([200, {
@@ -213,8 +213,12 @@ export default {
       });
     });
     mock.onGet('/a/save').reply(config => {
-      let { id } = config.params;
-      _A = _A.filter(u => id!==u.id);
+      debugger;
+      var toadd = config.params.filter(m => m.state == "new");
+      toadd.forEach(element => {
+        element.state = "normal";
+      });
+      _A.push(...toadd);
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve([200, {
