@@ -11,7 +11,9 @@
             <el-table-column label="项     目" header-align="center">
               <el-table-column width="40px">
                 <template slot-scope="scope">
-                  <div style="width: 14px;font-size:14px;word-wrap:break-word;letter-spacing:20px; ">{{ scope.row.itemType }}</div>
+                  <div
+                    style="width: 14px;font-size:14px;word-wrap:break-word;letter-spacing:20px; "
+                  >{{ scope.row.itemType }}</div>
                 </template>
               </el-table-column>
 
@@ -97,6 +99,84 @@ export default {
         },
         {
           item: "           免税劳务销售额"
+        },
+        {
+          itemType: "税款计算",
+          item: "销项税额"
+        },
+        {
+          item: "进项税额"
+        },
+        {
+          item: "上期留抵税额"
+        },
+        {
+          item: "进项税额转出"
+        },
+        {
+          item: "免、抵、退应退税额"
+        },
+        {
+          item: "按适用税率计算的纳税检查应补缴税额"
+        },
+        {
+          item: "应抵扣税额合计"
+        },
+        {
+          item: "实际抵扣税额"
+        },
+        {
+          item: "应纳税额"
+        },
+        {
+          item: "期末留抵税额"
+        },
+        {
+          item: "简易计税办法计算的应纳税额"
+        },
+        {
+          item: "按简易计税办法计算的纳税检查应补缴税额"
+        },
+        {
+          item: "应纳税额减征额"
+        },
+        {
+          item: "应纳税额合计"
+        },
+        {
+          itemType: "税款缴纳",
+          item: "期初未缴税额（多缴为负数）"
+        },
+        { item: "实收出口开具专用缴款书退税额" },
+        { item: "本期已缴税额" },
+        { item: "①分次预缴税额" },
+        { item: "②出口开具专用缴款书预缴税额" },
+        { item: "③本期缴纳上期应纳税额" },
+        { item: "④本期缴纳欠缴税额" },
+        { item: "期末未缴税额（多缴为负数）" },
+        { item: "其中：欠缴税额（≥0）" },
+        { item: "本期应补(退)税额" },
+        { item: "即征即退实际退税额" },
+        { item: "期初未缴查补税额" },
+        { item: "本期入库查补税额" },
+        { item: "期末未缴查补税额" },
+        {
+          itemType: "授权声明",
+          item: "      如果你已委托代理人申报，请填写下列资料："
+        },
+        {
+          item:
+            "      为代理一切税务事宜，现授权                                                                "
+        },
+        {
+          item:
+            "（地址）                                             为本纳税人的代理申报人，任何与本"
+        },
+        { item: "申报表有关的往来文件，都可寄予此人。" },
+        { item: "" },
+        {
+          item:
+            "                                                                                授权人签字："
         }
       ]
     };
@@ -113,13 +193,43 @@ export default {
             rowspan: 10,
             colspan: 1
           };
-        } else if(rowIndex<=9) {
+        } else if (rowIndex == 10) {
+          return {
+            rowspan: 14,
+            colspan: 1
+          };
+        } else if (rowIndex == 24) {
+          return {
+            rowspan: 14,
+            colspan: 1
+          };
+        } else if (rowIndex == 38) {
+          return {
+            rowspan: 7,
+            colspan: 1
+          };
+        } else {
           return {
             rowspan: 0,
             colspan: 0
           };
         }
       }
+      if (columnIndex == 1) {
+        switch (rowIndex) {
+          case 38:
+          case 39:
+          case 40:
+          case 41:
+          case 42:
+          case 43:
+            return {
+              rowspan: 1,
+              colspan: 3
+            };
+        }
+      }
+
     }
   }
 };
