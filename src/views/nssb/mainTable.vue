@@ -410,45 +410,32 @@ export default {
   },
   methods: {
     inputChange(row, value) {
-          debugger;
       let lc = parseInt(row.lc);
       let map = { "17": [12, 13, 14, 15, 16] };
       for (const key in map) {
-        if (lcs.hasOwnProperty(key)) {
+        if (map.hasOwnProperty(key)) {
           const lcs = map[key];
           if (lcs.includes(lc)) {
             let toUpdate = this.mainTable.filter(m => parseInt(m.lc) == key)[0];
             let toCompute = this.mainTable.filter(m =>
               lcs.includes(parseInt(m.lc))
             );
-
-            toUpdate.a1 = toCompute.reduce(function(prev, next, index, array) {
-              if (typeof prev != "number") {
-                return prev.a1 + next.a1;
+            let result = { a1: 0, a2: 0, b1: 0, b2: 0 };
+            toCompute.forEach(element => {
+              for (const ab in result) {
+                if (result.hasOwnProperty(ab) && element.hasOwnProperty(ab)) {
+                  let v = parseInt(element[ab]);
+                  if (!isNaN(v)) {
+                    result[ab] += v;
+                  }
+                }
               }
-              return prev + next.a1;
             });
 
-            toUpdate.a2 = toCompute.reduce(function(prev, next, index, array) {
-              if (typeof prev != "number") {
-                return prev.a2 + next.a2;
-              }
-              return prev + next.a2;
-            });
-
-            toUpdate.b1 = toCompute.reduce(function(prev, next, index, array) {
-              if (typeof prev != "number") {
-                return prev.b1 + next.b1;
-              }
-              return prev + next.b1;
-            });
-
-            toUpdate.b2 = toCompute.reduce(function(prev, next, index, array) {
-              if (typeof prev != "number") {
-                return prev.b2 + next.b2;
-              }
-              return prev + next.b2;
-            });
+            toUpdate.a1 = result.a1;
+            toUpdate.a2 = result.a2;
+            toUpdate.b1 = result.b1;
+            toUpdate.b2 = result.b2;
           }
         }
       }
@@ -457,8 +444,9 @@ export default {
       let lc = parseInt(row.lc);
       let lcs = [17, 18, 19, 20, 24, 27, 32, 33, 34, 38];
       if (lcs.includes(lc)) {
-        return "true";
+        return true;
       }
+      return false;
     },
     rowClass(row, rowIndex) {
       if (row.rowIndex >= 38) {
