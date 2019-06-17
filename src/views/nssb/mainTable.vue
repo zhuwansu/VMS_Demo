@@ -1,13 +1,13 @@
 <template>
   <div class="mainTableContainer">
     <div class="table-nav">
-  <el-link >xx 公司</el-link>
-  <el-link type="primary">主表</el-link>
-  <el-link type="primary">附表一</el-link>
-  <el-link type="primary">附表二</el-link>
-  <el-link type="primary">附表三</el-link>
-  <el-link type="primary">附表四</el-link>
-</div>
+      <el-link>xx 公司</el-link>
+      <el-link type="primary">主表</el-link>
+      <el-link type="primary">附表一</el-link>
+      <el-link type="primary">附表二</el-link>
+      <el-link type="primary">附表三</el-link>
+      <el-link type="primary">附表四</el-link>
+    </div>
     <el-table
       :data="mainTable"
       style="width: 100%"
@@ -55,13 +55,25 @@
             <el-table-column label="一般项目" header-align="center">
               <el-table-column label="本月数" header-align="center">
                 <template scope="scope">
-                  <el-input size="small" v-model="scope.row.a1" placeholder="请输入一般项目本月数"></el-input>
+                  <el-input
+                    size="small"
+                    :disabled="isDisable(scope.row)"
+                    :change="inputChange(scope.row,scope.row.a1)"
+                    v-model="scope.row.a1"
+                    placeholder="请输入一般项目本月数"
+                  ></el-input>
                   <span>{{scope.row.a1}}</span>
                 </template>
               </el-table-column>
               <el-table-column label="本年累计" header-align="center">
                 <template scope="scope">
-                  <el-input size="small" v-model="scope.row.a2" placeholder="请输入一般项目本年累计"></el-input>
+                  <el-input
+                    size="small"
+                    :disabled="isDisable(scope.row)"
+                    :change="inputChange(scope.row,scope.row.a1)"
+                    v-model="scope.row.a2"
+                    placeholder="请输入一般项目本年累计"
+                  ></el-input>
                   <span>{{scope.row.a2}}</span>
                 </template>
               </el-table-column>
@@ -69,13 +81,25 @@
             <el-table-column label="即征即退项目" header-align="center">
               <el-table-column label="本月数" header-align="center">
                 <template scope="scope">
-                  <el-input size="small" v-model="scope.row.b1" placeholder="请输入即征即退项目本月数"></el-input>
+                  <el-input
+                    size="small"
+                    :disabled="isDisable(scope.row)"
+                    :change="inputChange(scope.row,scope.row.a1)"
+                    v-model="scope.row.b1"
+                    placeholder="请输入即征即退项目本月数"
+                  ></el-input>
                   <span>{{scope.row.b1}}</span>
                 </template>
               </el-table-column>
               <el-table-column label="本年累计" header-align="center">
                 <template scope="scope">
-                  <el-input size="small" v-model="scope.row.b2" placeholder="请输入即征即退项目本年累计"></el-input>
+                  <el-input
+                    size="small"
+                    :disabled="isDisable(scope.row)"
+                    :change="inputChange(scope.row,scope.row.a1)"
+                    v-model="scope.row.b2"
+                    placeholder="请输入即征即退项目本年累计"
+                  ></el-input>
                   <span>{{scope.row.b2}}</span>
                 </template>
               </el-table-column>
@@ -84,7 +108,7 @@
         </el-table-column>
       </el-table-column>
     </el-table>
-    <p class="can-space">主管税务机关：                                                                                                                                                                                                                               接收人： </p>
+    <p class="can-space">主管税务机关： 接收人：</p>
   </div>
 </template>
 
@@ -385,8 +409,58 @@ export default {
     };
   },
   methods: {
+    inputChange(row, value) {
+          debugger;
+      let lc = parseInt(row.lc);
+      let map = { "17": [12, 13, 14, 15, 16] };
+      for (const key in map) {
+        if (lcs.hasOwnProperty(key)) {
+          const lcs = map[key];
+          if (lcs.includes(lc)) {
+            let toUpdate = this.mainTable.filter(m => parseInt(m.lc) == key)[0];
+            let toCompute = this.mainTable.filter(m =>
+              lcs.includes(parseInt(m.lc))
+            );
+
+            toUpdate.a1 = toCompute.reduce(function(prev, next, index, array) {
+              if (typeof prev != "number") {
+                return prev.a1 + next.a1;
+              }
+              return prev + next.a1;
+            });
+
+            toUpdate.a2 = toCompute.reduce(function(prev, next, index, array) {
+              if (typeof prev != "number") {
+                return prev.a2 + next.a2;
+              }
+              return prev + next.a2;
+            });
+
+            toUpdate.b1 = toCompute.reduce(function(prev, next, index, array) {
+              if (typeof prev != "number") {
+                return prev.b1 + next.b1;
+              }
+              return prev + next.b1;
+            });
+
+            toUpdate.b2 = toCompute.reduce(function(prev, next, index, array) {
+              if (typeof prev != "number") {
+                return prev.b2 + next.b2;
+              }
+              return prev + next.b2;
+            });
+          }
+        }
+      }
+    },
+    isDisable(row) {
+      let lc = parseInt(row.lc);
+      let lcs = [17, 18, 19, 20, 24, 27, 32, 33, 34, 38];
+      if (lcs.includes(lc)) {
+        return "true";
+      }
+    },
     rowClass(row, rowIndex) {
-      debugger;
       if (row.rowIndex >= 38) {
         return "non-edit can-space";
       }
@@ -395,7 +469,6 @@ export default {
       rows.splice(index, 1);
     },
     objectSpanMethod({ row, column, rowIndex, columnIndex }) {
-      debugger;
       if (columnIndex == 0) {
         if (rowIndex == 0) {
           return {
@@ -490,14 +563,13 @@ export default {
 .tb-edit .current-row:not(.non-edit) .el-select + span {
   display: none;
 }
-.el-table .can-space .cell
-{
+.el-table .can-space .cell {
   white-space: pre;
 }
-.can-space{
+.can-space {
   white-space: pre;
 }
-.table-nav{
+.table-nav {
   margin: 15px;
 }
 </style>
