@@ -411,34 +411,118 @@ export default {
   methods: {
     inputChange(row, value) {
       let lc = parseInt(row.lc);
-      let map = { "17": [12, 13, 14, 15, 16] };
-      for (const key in map) {
-        if (map.hasOwnProperty(key)) {
-          const lcs = map[key];
-          if (lcs.includes(lc)) {
-            let toUpdate = this.mainTable.filter(m => parseInt(m.lc) == key)[0];
-            let toCompute = this.mainTable.filter(m =>
-              lcs.includes(parseInt(m.lc))
-            );
-            let result = { a1: 0, a2: 0, b1: 0, b2: 0 };
-            toCompute.forEach(element => {
-              for (const ab in result) {
-                if (result.hasOwnProperty(ab) && element.hasOwnProperty(ab)) {
-                  let v = parseInt(element[ab]);
-                  if (!isNaN(v)) {
-                    result[ab] += v;
-                  }
-                }
-              }
-            });
-
-            toUpdate.a1 = result.a1;
-            toUpdate.a2 = result.a2;
-            toUpdate.b1 = result.b1;
-            toUpdate.b2 = result.b2;
+      let map = [
+        {
+          lc: "17",
+          lcs: [12, 13, 14, 15, 16],
+          handel: function(lc, v) {
+            if (lc == 14 || lc == 15) {
+              return -v;
+            }
+            return v;
+          }
+        },
+        {
+          lc: "18",
+          lcs: [17, 11],
+          handel: function(lc, v, total) {
+            debugger;
+            if (lc == 11) return v;
+            if (lc == 17 && v < total) {
+              return v - total;
+            }
+            return 0;
+          }
+        },
+        {
+          lc: "19",
+          lcs: [11, 18],
+          handel: function(lc, v) {
+            if (lc == 18) return -v;
+            return v;
+          }
+        },
+        {
+          lc: "20",
+          lcs: [17, 18],
+          handel: function(lc, v) {
+            if (lc == 18) return -v;
+            return v;
+          }
+        },
+        {
+          lc: "24",
+          lcs: [19, 21, 23],
+          handel: function(lc, v) {
+            if (lc == 23) return -v;
+            return v;
+          }
+        },
+        {
+          lc: "27",
+          lcs: [28, 29, 30, 31],
+          handel: function(lc, v) {
+            return v;
+          }
+        },
+        {
+          lc: "32",
+          lcs: [24, 25, 26, 27],
+          handel: function(lc, v) {
+            if (lc == 27) return -v;
+            return v;
+          }
+        },
+        {
+          lc: "33",
+          lcs: [25, 26, 27],
+          handel: function(lc, v) {
+            if (lc == 27) return -v;
+            return v;
+          }
+        },
+        {
+          lc: "34",
+          lcs: [24, 28, 29],
+          handel: function(lc, v) {
+            if (lc == 24) return v;
+            return -v;
+          }
+        },
+        {
+          lc: "38",
+          lcs: [16, 22, 36, 37],
+          handel: function(lc, v) {
+            if (lc == 37) return -v;
+            return v;
           }
         }
-      }
+      ];
+      map.forEach(t => {
+        const { lc, lcs, handel } = t;
+
+        let toUpdate = this.mainTable.filter(m => parseInt(m.lc) == lc)[0];
+        let toCompute = this.mainTable.filter(m =>
+          lcs.includes(parseInt(m.lc))
+        );
+        let result = { a1: 0, a2: 0, b1: 0, b2: 0 };
+
+        toCompute.forEach(m => {
+          for (const ab in result) {
+            if (result.hasOwnProperty(ab) && m.hasOwnProperty(ab)) {
+              let v = parseInt(m[ab]);
+              if (!isNaN(v)) {
+                result[ab] += handel(parseInt(m.lc), v, result[ab]);
+              }
+            }
+          }
+        });
+
+        toUpdate.a1 = result.a1;
+        toUpdate.a2 = result.a2;
+        toUpdate.b1 = result.b1;
+        toUpdate.b2 = result.b2;
+      });
     },
     isDisable(row) {
       let lc = parseInt(row.lc);
