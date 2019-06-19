@@ -2,13 +2,13 @@
   <div>
     <table id="tfhover" class="tftable" border="1">
       <tr>
-        <th colspan="18">增值税纳税申报表附列资料（一）</th>
+        <th style="text-align:center;" colspan="18">增值税纳税申报表附列资料（一）</th>
       </tr>
       <tr>
-        <th colspan="18">（本期销售情况明细）</th>
+        <th style="text-align:center;font-size: 12px;" colspan="18">（本期销售情况明细）</th>
       </tr>
       <tr>
-        <th colspan="18">税款所属时间： 年 月 日 至 年 月 日</th>
+        <td colspan="18">税款所属时间： 年 月 日 至 年 月 日</td>
       </tr>
       <tr>
         <td colspan="18">纳税人名称：（公章）</td>
@@ -61,37 +61,230 @@
         <td>13%税率的货物及加工修理修配劳务</td>
         <td>1</td>
         <td>
-          <input v-model="A1">
+          <input v-model="A_1_1">
+        </td>
+        <td>
+          <input v-model="A_1_2">
+        </td>
+        <td>
+          <input v-model="A_1_3">
+        </td>
+        <td>
+          <input v-model="A_1_4">
+        </td>
+        <td>
+          <input v-model="A_1_5">
+        </td>
+        <td>
+          <input v-model="A_1_6">
+        </td>
+        <td>
+          <input v-model="A_1_7">
+        </td>
+        <td>
+          <input v-model="A_1_8">
+        </td>
+        <td>
+          <input v-model="A_1_9">
+        </td>
+        <td>
+          <input v-model="A_1_10">
+        </td>
+        <td>
+          <input v-model="A_1_11">
+        </td>
+        <td>
+          <input v-model="A_1_12">
+        </td>
+        <td>
+          <input v-model="A_1_13">
+        </td>
+        <td>
+          <input v-model="A_1_14">
         </td>
       </tr>
       <tr>
         <td>13%税率的服务、不动产和无形资产</td>
         <td>2</td>
         <td>
-          <input v-model="A2">
+          <input v-model="A_2_1">
+        </td>
+        <td>
+          <input v-model="A_2_2">
+        </td>
+        <td>
+          <input v-model="A_2_3">
+        </td>
+        <td>
+          <input v-model="A_2_4">
+        </td>
+        <td>
+          <input v-model="A_2_5">
+        </td>
+        <td>
+          <input v-model="A_2_6">
+        </td>
+        <td>
+          <input v-model="A_2_7">
+        </td>
+        <td>
+          <input v-model="A_2_8">
+        </td>
+        <td>
+          <input v-model="A_2_9">
+        </td>
+        <td>
+          <input v-model="A_2_10">
+        </td>
+        <td>
+          <input v-model="A_2_11">
+        </td>
+        <td>
+          <input v-model="A_2_12">
+        </td>
+        <td>
+          <input v-model="A_2_13">
+        </td>
+        <td>
+          <input v-model="A_2_14">
         </td>
       </tr>
       <tr>
         <td>9%税率的货物及加工修理修配劳务</td>
         <td>3</td>
         <td>
-        <input v-model="A3">
+          <input v-model="A_3_1">
+        </td>
+        <td>
+          <input v-model="A_3_2">
+        </td>
+        <td>
+          <input v-model="A_3_3">
+        </td>
+        <td>
+          <input v-model="A_3_4">
+        </td>
+        <td>
+          <input v-model="A_3_5">
+        </td>
+        <td>
+          <input v-model="A_3_6">
+        </td>
+        <td>
+          <input v-model="A_3_7">
+        </td>
+        <td>
+          <input v-model="A_3_8">
+        </td>
+        <td>
+          <input v-model="A_3_9">
+        </td>
+        <td>
+          <input v-model="A_3_10">
+        </td>
+        <td>
+          <input v-model="A_3_11">
+        </td>
+        <td>
+          <input v-model="A_3_12">
+        </td>
+        <td>
+          <input v-model="A_3_13">
+        </td>
+        <td>
+          <input v-model="A_3_14">
         </td>
       </tr>
       <tr>
         <td>9%税率的服务、不动产和无形资产</td>
         <td>4</td>
         <td>
-          <input v-model="A4">
-
+          <input v-model="A_4_1">
+        </td>
+        <td>
+          <input v-model="A_4_2">
+        </td>
+        <td>
+          <input v-model="A_4_3">
+        </td>
+        <td>
+          <input v-model="A_4_4">
+        </td>
+        <td>
+          <input v-model="A_4_5">
+        </td>
+        <td>
+          <input v-model="A_4_6">
+        </td>
+        <td>
+          <input v-model="A_4_7">
+        </td>
+        <td>
+          <input v-model="A_4_8">
+        </td>
+        <td>
+          <input v-model="A_4_9">
+        </td>
+        <td>
+          <input v-model="A_4_10">
+        </td>
+        <td>
+          <input v-model="A_4_11">
+        </td>
+        <td>
+          <input v-model="A_4_12">
+        </td>
+        <td>
+          <input v-model="A_4_13">
+        </td>
+        <td>
+          <input v-model="A_4_14">
         </td>
       </tr>
       <tr>
         <td>6%税率</td>
         <td>5</td>
         <td>
-          <input v-model="A5">
-
+          <input v-model="A_5_1">
+        </td>
+        <td>
+          <input v-model="A_5_2">
+        </td>
+        <td>
+          <input v-model="A_5_3">
+        </td>
+        <td>
+          <input v-model="A_5_4">
+        </td>
+        <td>
+          <input v-model="A_5_5">
+        </td>
+        <td>
+          <input v-model="A_5_6">
+        </td>
+        <td>
+          <input v-model="A_5_7">
+        </td>
+        <td>
+          <input v-model="A_5_8">
+        </td>
+        <td>
+          <input v-model="A_5_9">
+        </td>
+        <td>
+          <input v-model="A_5_10">
+        </td>
+        <td>
+          <input v-model="A_5_11">
+        </td>
+        <td>
+          <input v-model="A_5_12">
+        </td>
+        <td>
+          <input v-model="A_5_13">
+        </td>
+        <td>
+          <input v-model="A_5_14">
         </td>
       </tr>
       <tr>
@@ -99,16 +292,92 @@
         <td>即征即退货物及加工修理修配劳务</td>
         <td>6</td>
         <td>
-          <input v-model="A6">
-
+          <input v-model="A_6_1">
+        </td>
+        <td>
+          <input v-model="A_6_2">
+        </td>
+        <td>
+          <input v-model="A_6_3">
+        </td>
+        <td>
+          <input v-model="A_6_4">
+        </td>
+        <td>
+          <input v-model="A_6_5">
+        </td>
+        <td>
+          <input v-model="A_6_6">
+        </td>
+        <td>
+          <input v-model="A_6_7">
+        </td>
+        <td>
+          <input v-model="A_6_8">
+        </td>
+        <td>
+          <input v-model="A_6_9">
+        </td>
+        <td>
+          <input v-model="A_6_10">
+        </td>
+        <td>
+          <input v-model="A_6_11">
+        </td>
+        <td>
+          <input v-model="A_6_12">
+        </td>
+        <td>
+          <input v-model="A_6_13">
+        </td>
+        <td>
+          <input v-model="A_6_14">
         </td>
       </tr>
       <tr>
         <td>即征即退服务、不动产和无形资产</td>
         <td>7</td>
         <td>
-         <input v-model="A7">
-
+          <input v-model="A_7_1">
+        </td>
+        <td>
+          <input v-model="A_7_2">
+        </td>
+        <td>
+          <input v-model="A_7_3">
+        </td>
+        <td>
+          <input v-model="A_7_4">
+        </td>
+        <td>
+          <input v-model="A_7_5">
+        </td>
+        <td>
+          <input v-model="A_7_6">
+        </td>
+        <td>
+          <input v-model="A_7_7">
+        </td>
+        <td>
+          <input v-model="A_7_8">
+        </td>
+        <td>
+          <input v-model="A_7_9">
+        </td>
+        <td>
+          <input v-model="A_7_10">
+        </td>
+        <td>
+          <input v-model="A_7_11">
+        </td>
+        <td>
+          <input v-model="A_7_12">
+        </td>
+        <td>
+          <input v-model="A_7_13">
+        </td>
+        <td>
+          <input v-model="A_7_14">
         </td>
       </tr>
 
@@ -118,8 +387,46 @@
         <td>6%征收率</td>
         <td>8</td>
         <td>
-          <input v-model="A8">
-
+          <input v-model="A_8_1">
+        </td>
+        <td>
+          <input v-model="A_8_2">
+        </td>
+        <td>
+          <input v-model="A_8_3">
+        </td>
+        <td>
+          <input v-model="A_8_4">
+        </td>
+        <td>
+          <input v-model="A_8_5">
+        </td>
+        <td>
+          <input v-model="A_8_6">
+        </td>
+        <td>
+          <input v-model="A_8_7">
+        </td>
+        <td>
+          <input v-model="A_8_8">
+        </td>
+        <td>
+          <input v-model="A_8_9">
+        </td>
+        <td>
+          <input v-model="A_8_10">
+        </td>
+        <td>
+          <input v-model="A_8_11">
+        </td>
+        <td>
+          <input v-model="A_8_12">
+        </td>
+        <td>
+          <input v-model="A_8_13">
+        </td>
+        <td>
+          <input v-model="A_8_14">
         </td>
       </tr>
 
@@ -127,7 +434,46 @@
         <td>5%征收率的货物及加工修理修配劳务</td>
         <td>9a</td>
         <td>
-         <input v-model="A9a">
+          <input v-model="A_9a_1">
+        </td>
+        <td>
+          <input v-model="A_9a_2">
+        </td>
+        <td>
+          <input v-model="A_9a_3">
+        </td>
+        <td>
+          <input v-model="A_9a_4">
+        </td>
+        <td>
+          <input v-model="A_9a_5">
+        </td>
+        <td>
+          <input v-model="A_9a_6">
+        </td>
+        <td>
+          <input v-model="A_9a_7">
+        </td>
+        <td>
+          <input v-model="A_9a_8">
+        </td>
+        <td>
+          <input v-model="A_9a_9">
+        </td>
+        <td>
+          <input v-model="A_9a_10">
+        </td>
+        <td>
+          <input v-model="A_9a_11">
+        </td>
+        <td>
+          <input v-model="A_9a_12">
+        </td>
+        <td>
+          <input v-model="A_9a_13">
+        </td>
+        <td>
+          <input v-model="A_9a_14">
         </td>
       </tr>
 
@@ -135,8 +481,46 @@
         <td>5%征收率的服务、不动产和无形资产</td>
         <td>9b</td>
         <td>
-          <input v-model="A9b">
-
+          <input v-model="A_9b_1">
+        </td>
+        <td>
+          <input v-model="A_9b_2">
+        </td>
+        <td>
+          <input v-model="A_9b_3">
+        </td>
+        <td>
+          <input v-model="A_9b_4">
+        </td>
+        <td>
+          <input v-model="A_9b_5">
+        </td>
+        <td>
+          <input v-model="A_9b_6">
+        </td>
+        <td>
+          <input v-model="A_9b_7">
+        </td>
+        <td>
+          <input v-model="A_9b_8">
+        </td>
+        <td>
+          <input v-model="A_9b_9">
+        </td>
+        <td>
+          <input v-model="A_9b_10">
+        </td>
+        <td>
+          <input v-model="A_9b_11">
+        </td>
+        <td>
+          <input v-model="A_9b_12">
+        </td>
+        <td>
+          <input v-model="A_9b_13">
+        </td>
+        <td>
+          <input v-model="A_9b_14">
         </td>
       </tr>
 
@@ -144,9 +528,46 @@
         <td>4%征收率</td>
         <td>10</td>
         <td>
-          <input v-model="A10">
-
-
+          <input v-model="A_10_1">
+        </td>
+        <td>
+          <input v-model="A_10_2">
+        </td>
+        <td>
+          <input v-model="A_10_3">
+        </td>
+        <td>
+          <input v-model="A_10_4">
+        </td>
+        <td>
+          <input v-model="A_10_5">
+        </td>
+        <td>
+          <input v-model="A_10_6">
+        </td>
+        <td>
+          <input v-model="A_10_7">
+        </td>
+        <td>
+          <input v-model="A_10_8">
+        </td>
+        <td>
+          <input v-model="A_10_9">
+        </td>
+        <td>
+          <input v-model="A_10_10">
+        </td>
+        <td>
+          <input v-model="A_10_11">
+        </td>
+        <td>
+          <input v-model="A_10_12">
+        </td>
+        <td>
+          <input v-model="A_10_13">
+        </td>
+        <td>
+          <input v-model="A_10_14">
         </td>
       </tr>
 
@@ -154,8 +575,46 @@
         <td>3%征收率的货物及加工修理修配劳务</td>
         <td>11</td>
         <td>
-          <input v-model="A11">
-
+          <input v-model="A_11_1">
+        </td>
+        <td>
+          <input v-model="A_11_2">
+        </td>
+        <td>
+          <input v-model="A_11_3">
+        </td>
+        <td>
+          <input v-model="A_11_4">
+        </td>
+        <td>
+          <input v-model="A_11_5">
+        </td>
+        <td>
+          <input v-model="A_11_6">
+        </td>
+        <td>
+          <input v-model="A_11_7">
+        </td>
+        <td>
+          <input v-model="A_11_8">
+        </td>
+        <td>
+          <input v-model="A_11_9">
+        </td>
+        <td>
+          <input v-model="A_11_10">
+        </td>
+        <td>
+          <input v-model="A_11_11">
+        </td>
+        <td>
+          <input v-model="A_11_12">
+        </td>
+        <td>
+          <input v-model="A_11_13">
+        </td>
+        <td>
+          <input v-model="A_11_14">
         </td>
       </tr>
 
@@ -163,8 +622,46 @@
         <td>3%征收率的服务、不动产和无形资产</td>
         <td>12</td>
         <td>
-          <input v-model="A12">
-
+          <input v-model="A_12_1">
+        </td>
+        <td>
+          <input v-model="A_12_2">
+        </td>
+        <td>
+          <input v-model="A_12_3">
+        </td>
+        <td>
+          <input v-model="A_12_4">
+        </td>
+        <td>
+          <input v-model="A_12_5">
+        </td>
+        <td>
+          <input v-model="A_12_6">
+        </td>
+        <td>
+          <input v-model="A_12_7">
+        </td>
+        <td>
+          <input v-model="A_12_8">
+        </td>
+        <td>
+          <input v-model="A_12_9">
+        </td>
+        <td>
+          <input v-model="A_12_10">
+        </td>
+        <td>
+          <input v-model="A_12_11">
+        </td>
+        <td>
+          <input v-model="A_12_12">
+        </td>
+        <td>
+          <input v-model="A_12_13">
+        </td>
+        <td>
+          <input v-model="A_12_14">
         </td>
       </tr>
 
@@ -172,8 +669,46 @@
         <td>预征率 %</td>
         <td>13a</td>
         <td>
-         <input v-model="A13a">
-
+          <input v-model="A_13a_1">
+        </td>
+        <td>
+          <input v-model="A_13a_2">
+        </td>
+        <td>
+          <input v-model="A_13a_3">
+        </td>
+        <td>
+          <input v-model="A_13a_4">
+        </td>
+        <td>
+          <input v-model="A_13a_5">
+        </td>
+        <td>
+          <input v-model="A_13a_6">
+        </td>
+        <td>
+          <input v-model="A_13a_7">
+        </td>
+        <td>
+          <input v-model="A_13a_8">
+        </td>
+        <td>
+          <input v-model="A_13a_9">
+        </td>
+        <td>
+          <input v-model="A_13a_10">
+        </td>
+        <td>
+          <input v-model="A_13a_11">
+        </td>
+        <td>
+          <input v-model="A_13a_12">
+        </td>
+        <td>
+          <input v-model="A_13a_13">
+        </td>
+        <td>
+          <input v-model="A_13a_14">
         </td>
       </tr>
 
@@ -181,8 +716,46 @@
         <td>预征率 %</td>
         <td>13b</td>
         <td>
-          <input v-model="A13b">
-
+          <input v-model="A_13b_1">
+        </td>
+        <td>
+          <input v-model="A_13b_2">
+        </td>
+        <td>
+          <input v-model="A_13b_3">
+        </td>
+        <td>
+          <input v-model="A_13b_4">
+        </td>
+        <td>
+          <input v-model="A_13b_5">
+        </td>
+        <td>
+          <input v-model="A_13b_6">
+        </td>
+        <td>
+          <input v-model="A_13b_7">
+        </td>
+        <td>
+          <input v-model="A_13b_8">
+        </td>
+        <td>
+          <input v-model="A_13b_9">
+        </td>
+        <td>
+          <input v-model="A_13b_10">
+        </td>
+        <td>
+          <input v-model="A_13b_11">
+        </td>
+        <td>
+          <input v-model="A_13b_12">
+        </td>
+        <td>
+          <input v-model="A_13b_13">
+        </td>
+        <td>
+          <input v-model="A_13b_14">
         </td>
       </tr>
 
@@ -190,8 +763,46 @@
         <td>预征率 %</td>
         <td>13c</td>
         <td>
-         <input v-model="A13c">
-
+          <input v-model="A_13c_1">
+        </td>
+        <td>
+          <input v-model="A_13c_2">
+        </td>
+        <td>
+          <input v-model="A_13c_3">
+        </td>
+        <td>
+          <input v-model="A_13c_4">
+        </td>
+        <td>
+          <input v-model="A_13c_5">
+        </td>
+        <td>
+          <input v-model="A_13c_6">
+        </td>
+        <td>
+          <input v-model="A_13c_7">
+        </td>
+        <td>
+          <input v-model="A_13c_8">
+        </td>
+        <td>
+          <input v-model="A_13c_9">
+        </td>
+        <td>
+          <input v-model="A_13c_10">
+        </td>
+        <td>
+          <input v-model="A_13c_11">
+        </td>
+        <td>
+          <input v-model="A_13c_12">
+        </td>
+        <td>
+          <input v-model="A_13c_13">
+        </td>
+        <td>
+          <input v-model="A_13c_14">
         </td>
       </tr>
 
@@ -200,8 +811,46 @@
         <td>即征即退货物及加工修理修配劳务</td>
         <td>14</td>
         <td>
-          <input v-model="A14">
-
+          <input v-model="A_14_1">
+        </td>
+        <td>
+          <input v-model="A_14_2">
+        </td>
+        <td>
+          <input v-model="A_14_3">
+        </td>
+        <td>
+          <input v-model="A_14_4">
+        </td>
+        <td>
+          <input v-model="A_14_5">
+        </td>
+        <td>
+          <input v-model="A_14_6">
+        </td>
+        <td>
+          <input v-model="A_14_7">
+        </td>
+        <td>
+          <input v-model="A_14_8">
+        </td>
+        <td>
+          <input v-model="A_14_9">
+        </td>
+        <td>
+          <input v-model="A_14_10">
+        </td>
+        <td>
+          <input v-model="A_14_11">
+        </td>
+        <td>
+          <input v-model="A_14_12">
+        </td>
+        <td>
+          <input v-model="A_14_13">
+        </td>
+        <td>
+          <input v-model="A_14_14">
         </td>
       </tr>
 
@@ -209,41 +858,250 @@
         <td>即征即退服务、不动产和无形资产</td>
         <td>15</td>
         <td>
-         <input v-model="A15">
-
+          <input v-model="A_15_1">
+        </td>
+        <td>
+          <input v-model="A_15_2">
+        </td>
+        <td>
+          <input v-model="A_15_3">
+        </td>
+        <td>
+          <input v-model="A_15_4">
+        </td>
+        <td>
+          <input v-model="A_15_5">
+        </td>
+        <td>
+          <input v-model="A_15_6">
+        </td>
+        <td>
+          <input v-model="A_15_7">
+        </td>
+        <td>
+          <input v-model="A_15_8">
+        </td>
+        <td>
+          <input v-model="A_15_9">
+        </td>
+        <td>
+          <input v-model="A_15_10">
+        </td>
+        <td>
+          <input v-model="A_15_11">
+        </td>
+        <td>
+          <input v-model="A_15_12">
+        </td>
+        <td>
+          <input v-model="A_15_13">
+        </td>
+        <td>
+          <input v-model="A_15_14">
         </td>
       </tr>
 
       <tr>
         <td rowspan="2">三、免抵退税</td>
         <td>货物及加工修理修配劳务</td>
-        <td> </td>
+        <td></td>
         <td>16</td>
-        <td> <input v-model="A16">
-</td>
+        <td>
+          <input v-model="A_16_1">
+        </td>
+        <td>
+          <input v-model="A_16_2">
+        </td>
+        <td>
+          <input v-model="A_16_3">
+        </td>
+        <td>
+          <input v-model="A_16_4">
+        </td>
+        <td>
+          <input v-model="A_16_5">
+        </td>
+        <td>
+          <input v-model="A_16_6">
+        </td>
+        <td>
+          <input v-model="A_16_7">
+        </td>
+        <td>
+          <input v-model="A_16_8">
+        </td>
+        <td>
+          <input v-model="A_16_9">
+        </td>
+        <td>
+          <input v-model="A_16_10">
+        </td>
+        <td>
+          <input v-model="A_16_11">
+        </td>
+        <td>
+          <input v-model="A_16_12">
+        </td>
+        <td>
+          <input v-model="A_16_13">
+        </td>
+        <td>
+          <input v-model="A_16_14">
+        </td>
       </tr>
       <tr>
         <td>服务、不动产和无形资产</td>
-        <td> </td>
-       <td>17</td>
-        <td> <input v-model="A17"></td>
-        
+        <td></td>
+        <td>17</td>
+        <td>
+          <input v-model="A_17_1">
+        </td>
+        <td>
+          <input v-model="A_17_2">
+        </td>
+        <td>
+          <input v-model="A_17_3">
+        </td>
+        <td>
+          <input v-model="A_17_4">
+        </td>
+        <td>
+          <input v-model="A_17_5">
+        </td>
+        <td>
+          <input v-model="A_17_6">
+        </td>
+        <td>
+          <input v-model="A_17_7">
+        </td>
+        <td>
+          <input v-model="A_17_8">
+        </td>
+        <td>
+          <input v-model="A_17_9">
+        </td>
+        <td>
+          <input v-model="A_17_10">
+        </td>
+        <td>
+          <input v-model="A_17_11">
+        </td>
+        <td>
+          <input v-model="A_17_12">
+        </td>
+        <td>
+          <input v-model="A_17_13">
+        </td>
+        <td>
+          <input v-model="A_17_14">
+        </td>
       </tr>
       <tr>
         <td rowspan="2">四、免税</td>
         <td>货物及加工修理修配劳务</td>
-        <td> </td>
+        <td></td>
         <td>18</td>
-        <td> <input v-model="A18"></td>
-        
+        <td>
+          <input v-model="A_18_1">
+        </td>
+        <td>
+          <input v-model="A_18_2">
+        </td>
+        <td>
+          <input v-model="A_18_3">
+        </td>
+        <td>
+          <input v-model="A_18_4">
+        </td>
+        <td>
+          <input v-model="A_18_5">
+        </td>
+        <td>
+          <input v-model="A_18_6">
+        </td>
+        <td>
+          <input v-model="A_18_7">
+        </td>
+        <td>
+          <input v-model="A_18_8">
+        </td>
+        <td>
+          <input v-model="A_18_9">
+        </td>
+        <td>
+          <input v-model="A_18_10">
+        </td>
+        <td>
+          <input v-model="A_18_11">
+        </td>
+        <td>
+          <input v-model="A_18_12">
+        </td>
+        <td>
+          <input v-model="A_18_13">
+        </td>
+        <td>
+          <input v-model="A_18_14">
+        </td>
       </tr>
       <tr>
         <td>服务、不动产和无形资产</td>
-        <td> </td>
+        <td></td>
         <td>19</td>
-        <td><input v-model="A19"></td>
+        <td>
+          <input v-model="A_19_1">
+        </td>
+        <td>
+          <input v-model="A_19_2">
+        </td>
+        <td>
+          <input v-model="A_19_3">
+        </td>
+        <td>
+          <input v-model="A_19_4">
+        </td>
+        <td>
+          <input v-model="A_19_5">
+        </td>
+        <td>
+          <input v-model="A_19_6">
+        </td>
+        <td>
+          <input v-model="A_19_7">
+        </td>
+        <td>
+          <input v-model="A_19_8">
+        </td>
+        <td>
+          <input v-model="A_19_9">
+        </td>
+        <td>
+          <input v-model="A_19_10">
+        </td>
+        <td>
+          <input v-model="A_19_11">
+        </td>
+        <td>
+          <input v-model="A_19_12">
+        </td>
+        <td>
+          <input v-model="A_19_13">
+        </td>
+        <td>
+          <input v-model="A_19_14">
+        </td>
       </tr>
     </table>
+<br/>
+<hr/>
+<br/>
+    <div>
+      <p style="color:red;">1、开具增值税专用发票、开具其他发票两个栏次根据1.1销项发票取数台账填写，区分发票类型（专票或普票）结合对应的申报行次填写。（包含免税开票情形）</p>
+      <p style="color:red;">2、根据总销售收入台账减去销项发票取数台账加上视同销售台账得到的金额，按照对应的申报表栏次填写未开具发票销售额及销项税额</p>
+      <p style="color:red;">3、纳税检查调整栏次根据1.3纳税检查调整台账中的数据，按照对应的申报表栏次填写</p>
+      <p style="color:red;">4.即征即退行次数据根据1.5即征即退管理台账的金额填写</p>
+      <p style="color:red;">5.服务、不动产和无形资产扣除项目本期实际扣除金额根据附表三的数据填写，具体公式已经在表格里</p>
+    </div>
   </div>
 </template>
 
@@ -254,26 +1112,541 @@ export default {
   //19*14
   data() {
     return {
-A1:0,	A2:0,	A3:0,	A4:0,	A5:0,	A6:0,	A7:0,	A8:0,	A9:0,	A10:0,	A11:0,	A12:0,	A13:0,	A14:0,
-B1:0,	B2:0,	B3:0,	B4:0,	B5:0,	B6:0,	B7:0,	B8:0,	B9:0,	B10:0,	B11:0,	B12:0,	B13:0,	B14:0,
-C1:0,	C2:0,	C3:0,	C4:0,	C5:0,	C6:0,	C7:0,	C8:0,	C9:0,	C10:0,	C11:0,	C12:0,	C13:0,	C14:0,
-D1:0,	D2:0,	D3:0,	D4:0,	D5:0,	D6:0,	D7:0,	D8:0,	D9:0,	D10:0,	D11:0,	D12:0,	D13:0,	D14:0,
-E1:0,	E2:0,	E3:0,	E4:0,	E5:0,	E6:0,	E7:0,	E8:0,	E9:0,	E10:0,	E11:0,	E12:0,	E13:0,	E14:0,
-F1:0,	F2:0,	F3:0,	F4:0,	F5:0,	F6:0,	F7:0,	F8:0,	F9:0,	F10:0,	F11:0,	F12:0,	F13:0,	F14:0,
-G1:0,	G2:0,	G3:0,	G4:0,	G5:0,	G6:0,	G7:0,	G8:0,	G9:0,	G10:0,	G11:0,	G12:0,	G13:0,	G14:0,
-H1:0,	H2:0,	H3:0,	H4:0,	H5:0,	H6:0,	H7:0,	H8:0,	H9:0,	H10:0,	H11:0,	H12:0,	H13:0,	H14:0,
-I1:0,	I2:0,	I3:0,	I4:0,	I5:0,	I6:0,	I7:0,	I8:0,	I9:0,	I10:0,	I11:0,	I12:0,	I13:0,	I14:0,
-J1:0,	J2:0,	J3:0,	J4:0,	J5:0,	J6:0,	J7:0,	J8:0,	J9:0,	J10:0,	J11:0,	J12:0,	J13:0,	J14:0,
-K1:0,	K2:0,	K3:0,	K4:0,	K5:0,	K6:0,	K7:0,	K8:0,	K9:0,	K10:0,	K11:0,	K12:0,	K13:0,	K14:0,
-L1:0,	L2:0,	L3:0,	L4:0,	L5:0,	L6:0,	L7:0,	L8:0,	L9:0,	L10:0,	L11:0,	L12:0,	L13:0,	L14:0,
-M1:0,	M2:0,	M3:0,	M4:0,	M5:0,	M6:0,	M7:0,	M8:0,	M9:0,	M10:0,	M11:0,	M12:0,	M13:0,	M14:0,
-N1:0,	N2:0,	N3:0,	N4:0,	N5:0,	N6:0,	N7:0,	N8:0,	N9:0,	N10:0,	N11:0,	N12:0,	N13:0,	N14:0,
-O1:0,	O2:0,	O3:0,	O4:0,	O5:0,	O6:0,	O7:0,	O8:0,	O9:0,	O10:0,	O11:0,	O12:0,	O13:0,	O14:0,
-P1:0,	P2:0,	P3:0,	P4:0,	P5:0,	P6:0,	P7:0,	P8:0,	P9:0,	P10:0,	P11:0,	P12:0,	P13:0,	P14:0,
-Q1:0,	Q2:0,	Q3:0,	Q4:0,	Q5:0,	Q6:0,	Q7:0,	Q8:0,	Q9:0,	Q10:0,	Q11:0,	Q12:0,	Q13:0,	Q14:0,
-R1:0,	R2:0,	R3:0,	R4:0,	R5:0,	R6:0,	R7:0,	R8:0,	R9:0,	R10:0,	R11:0,	R12:0,	R13:0,	R14:0,
-S1:0,	S2:0,	S3:0,	S4:0,	S5:0,	S6:0,	S7:0,	S8:0,	S9:0,	S10:0,	S11:0,	S12:0,	S13:0,	S14:0,
+      A_1_1: 0,
+      A_1_2: 0,
+      A_1_3: 0,
+      A_1_4: 0,
+      A_1_5: 0,
+      A_1_6: 0,
+      A_1_7: 0,
+      A_1_8: 0,
+      A_1_12: 0,
+      A_2_1: 0,
+      A_2_2: 0,
+      A_2_3: 0,
+      A_2_4: 0,
+      A_2_5: 0,
+      A_2_6: 0,
+      A_2_7: 0,
+      A_2_8: 0,
+      A_2_12: 0,
+      A_3_1: 0,
+      A_3_2: 0,
+      A_3_3: 0,
+      A_3_4: 0,
+      A_3_5: 0,
+      A_3_6: 0,
+      A_3_7: 0,
+      A_3_8: 0,
+      A_3_12: 0,
+      A_4_1: 0,
+      A_4_2: 0,
+      A_4_3: 0,
+      A_4_4: 0,
+      A_4_5: 0,
+      A_4_6: 0,
+      A_4_7: 0,
+      A_4_8: 0,
+      A_4_12: 0,
+      A_5_1: 0,
+      A_5_2: 0,
+      A_5_3: 0,
+      A_5_4: 0,
+      A_5_5: 0,
+      A_5_6: 0,
+      A_5_7: 0,
+      A_5_8: 0,
+      A_5_12: 0,
+      A_6_1: 0,
+      A_6_2: 0,
+      A_6_3: 0,
+      A_6_4: 0,
+      A_6_5: 0,
+      A_6_6: 0,
+      A_6_7: 0,
+      A_6_8: 0,
+      A_6_12: 0,
+      A_7_1: 0,
+      A_7_2: 0,
+      A_7_3: 0,
+      A_7_4: 0,
+      A_7_5: 0,
+      A_7_6: 0,
+      A_7_7: 0,
+      A_7_8: 0,
+      A_7_12: 0,
+      A_8_1: 0,
+      A_8_2: 0,
+      A_8_3: 0,
+      A_8_4: 0,
+      A_8_5: 0,
+      A_8_6: 0,
+      A_8_7: 0,
+      A_8_8: 0,
+      A_8_12: 0,
+      A_9a_1: 0,
+      A_9a_2: 0,
+      A_9a_3: 0,
+      A_9a_4: 0,
+      A_9a_5: 0,
+      A_9a_6: 0,
+      A_9a_7: 0,
+      A_9a_8: 0,
+      A_9a_12: 0,
+      A_9b_1: 0,
+      A_9b_2: 0,
+      A_9b_3: 0,
+      A_9b_4: 0,
+      A_9b_5: 0,
+      A_9b_6: 0,
+      A_9b_7: 0,
+      A_9b_8: 0,
+      A_9b_12: 0,
+      A_10_1: 0,
+      A_10_2: 0,
+      A_10_3: 0,
+      A_10_4: 0,
+      A_10_5: 0,
+      A_10_6: 0,
+      A_10_7: 0,
+      A_10_8: 0,
+      A_10_12: 0,
+      A_11_1: 0,
+      A_11_2: 0,
+      A_11_3: 0,
+      A_11_4: 0,
+      A_11_5: 0,
+      A_11_6: 0,
+      A_11_7: 0,
+      A_11_8: 0,
+      A_11_12: 0,
+      A_12_1: 0,
+      A_12_2: 0,
+      A_12_3: 0,
+      A_12_4: 0,
+      A_12_5: 0,
+      A_12_6: 0,
+      A_12_7: 0,
+      A_12_8: 0,
+      A_12_12: 0,
+      A_13a_1: 0,
+      A_13a_2: 0,
+      A_13a_3: 0,
+      A_13a_4: 0,
+      A_13a_5: 0,
+      A_13a_6: 0,
+      A_13a_7: 0,
+      A_13a_8: 0,
+      A_13a_12: 0,
+      A_13b_1: 0,
+      A_13b_2: 0,
+      A_13b_3: 0,
+      A_13b_4: 0,
+      A_13b_5: 0,
+      A_13b_6: 0,
+      A_13b_7: 0,
+      A_13b_8: 0,
+      A_13b_12: 0,
+      A_13c_1: 0,
+      A_13c_2: 0,
+      A_13c_3: 0,
+      A_13c_4: 0,
+      A_13c_5: 0,
+      A_13c_6: 0,
+      A_13c_7: 0,
+      A_13c_8: 0,
+      A_13c_12: 0,
+      A_14_1: 0,
+      A_14_2: 0,
+      A_14_3: 0,
+      A_14_4: 0,
+      A_14_5: 0,
+      A_14_6: 0,
+      A_14_7: 0,
+      A_14_8: 0,
+      A_14_12: 0,
+      A_15_1: 0,
+      A_15_2: 0,
+      A_15_3: 0,
+      A_15_4: 0,
+      A_15_5: 0,
+      A_15_6: 0,
+      A_15_7: 0,
+      A_15_8: 0,
+      A_15_12: 0,
+      A_16_1: 0,
+      A_16_2: 0,
+      A_16_3: 0,
+      A_16_4: 0,
+      A_16_5: 0,
+      A_16_6: 0,
+      A_16_7: 0,
+      A_16_8: 0,
+      A_16_12: 0,
+      A_17_1: 0,
+      A_17_2: 0,
+      A_17_3: 0,
+      A_17_4: 0,
+      A_17_5: 0,
+      A_17_6: 0,
+      A_17_7: 0,
+      A_17_8: 0,
+      A_17_12: 0,
+      A_18_1: 0,
+      A_18_2: 0,
+      A_18_3: 0,
+      A_18_4: 0,
+      A_18_5: 0,
+      A_18_6: 0,
+      A_18_7: 0,
+      A_18_8: 0,
+      A_18_12: 0,
+      A_19_1: 0,
+      A_19_2: 0,
+      A_19_3: 0,
+      A_19_4: 0,
+      A_19_5: 0,
+      A_19_6: 0,
+      A_19_7: 0,
+      A_19_8: 0,
+      A_19_12: 0,
+      sl: 0.1
     };
+  },
+  computed: {
+    A_1_9() {
+      return +this.A_1_1 + +this.A_1_3 + +this.A_1_5 + +this.A_1_7;
+    },
+    A_2_9() {
+      return +this.A_2_1 + +this.A_2_3 + +this.A_2_5 + +this.A_2_7;
+    },
+    A_3_9() {
+      return +this.A_3_1 + +this.A_3_3 + +this.A_3_5 + +this.A_3_7;
+    },
+    A_4_9() {
+      return +this.A_4_1 + +this.A_4_3 + +this.A_4_5 + +this.A_4_7;
+    },
+    A_5_9() {
+      return +this.A_5_1 + +this.A_5_3 + +this.A_5_5 + +this.A_5_7;
+    },
+    A_6_9() {
+      return +this.A_6_1 + +this.A_6_3 + +this.A_6_5 + +this.A_6_7;
+    },
+    A_7_9() {
+      return +this.A_7_1 + +this.A_7_3 + +this.A_7_5 + +this.A_7_7;
+    },
+    A_8_9() {
+      return +this.A_8_1 + +this.A_8_3 + +this.A_8_5 + +this.A_8_7;
+    },
+    A_9a_9() {
+      return +this.A_9a_1 + +this.A_9a_3 + +this.A_9a_5 + +this.A_9a_7;
+    },
+    A_9b_9() {
+      return +this.A_9b_1 + +this.A_9b_3 + +this.A_9b_5 + +this.A_9b_7;
+    },
+    A_10_9() {
+      return +this.A_10_1 + +this.A_10_3 + +this.A_10_5 + +this.A_10_7;
+    },
+    A_11_9() {
+      return +this.A_11_1 + +this.A_11_3 + +this.A_11_5 + +this.A_11_7;
+    },
+    A_12_9() {
+      return +this.A_12_1 + +this.A_12_3 + +this.A_12_5 + +this.A_12_7;
+    },
+    A_13a_9() {
+      return +this.A_13a_1 + +this.A_13a_3 + +this.A_13a_5 + +this.A_13a_7;
+    },
+    A_13b_9() {
+      return +this.A_13b_1 + +this.A_13b_3 + +this.A_13b_5 + +this.A_13b_7;
+    },
+    A_13c_9() {
+      return +this.A_13c_1 + +this.A_13c_3 + +this.A_13c_5 + +this.A_13c_7;
+    },
+    A_14_9() {
+      return +this.A_14_1 + +this.A_14_3 + +this.A_14_5 + +this.A_14_7;
+    },
+    A_15_9() {
+      return +this.A_15_1 + +this.A_15_3 + +this.A_15_5 + +this.A_15_7;
+    },
+    A_16_9() {
+      return +this.A_16_1 + +this.A_16_3 + +this.A_16_5 + +this.A_16_7;
+    },
+    A_17_9() {
+      return +this.A_17_1 + +this.A_17_3 + +this.A_17_5 + +this.A_17_7;
+    },
+    A_18_9() {
+      return +this.A_18_1 + +this.A_18_3 + +this.A_18_5 + +this.A_18_7;
+    },
+    A_19_9() {
+      return +this.A_19_1 + +this.A_19_3 + +this.A_19_5 + +this.A_19_7;
+    },
+    A_1_10() {
+      return +this.A_1_2 + +this.A_1_4 + +this.A_1_6 + +this.A_1_8;
+    },
+    A_2_10() {
+      return +this.A_2_2 + +this.A_2_4 + +this.A_2_6 + +this.A_2_8;
+    },
+    A_3_10() {
+      return +this.A_3_2 + +this.A_3_4 + +this.A_3_6 + +this.A_3_8;
+    },
+    A_4_10() {
+      return +this.A_4_2 + +this.A_4_4 + +this.A_4_6 + +this.A_4_8;
+    },
+    A_5_10() {
+      return +this.A_5_2 + +this.A_5_4 + +this.A_5_6 + +this.A_5_8;
+    },
+    A_6_10() {
+      return +this.A_6_2 + +this.A_6_4 + +this.A_6_6 + +this.A_6_8;
+    },
+    A_7_10() {
+      return +this.A_7_2 + +this.A_7_4 + +this.A_7_6 + +this.A_7_8;
+    },
+    A_8_10() {
+      return +this.A_8_2 + +this.A_8_4 + +this.A_8_6 + +this.A_8_8;
+    },
+    A_9a_10() {
+      return +this.A_9a_2 + +this.A_9a_4 + +this.A_9a_6 + +this.A_9a_8;
+    },
+    A_9b_10() {
+      return +this.A_9b_2 + +this.A_9b_4 + +this.A_9b_6 + +this.A_9b_8;
+    },
+    A_10_10() {
+      return +this.A_10_2 + +this.A_10_4 + +this.A_10_6 + +this.A_10_8;
+    },
+    A_11_10() {
+      return +this.A_11_2 + +this.A_11_4 + +this.A_11_6 + +this.A_11_8;
+    },
+    A_12_10() {
+      return +this.A_12_2 + +this.A_12_4 + +this.A_12_6 + +this.A_12_8;
+    },
+    A_13a_10() {
+      return +this.A_13a_2 + +this.A_13a_4 + +this.A_13a_6 + +this.A_13a_8;
+    },
+    A_13b_10() {
+      return +this.A_13b_2 + +this.A_13b_4 + +this.A_13b_6 + +this.A_13b_8;
+    },
+    A_13c_10() {
+      return +this.A_13c_2 + +this.A_13c_4 + +this.A_13c_6 + +this.A_13c_8;
+    },
+    A_14_10() {
+      return +this.A_14_2 + +this.A_14_4 + +this.A_14_6 + +this.A_14_8;
+    },
+    A_15_10() {
+      return +this.A_15_2 + +this.A_15_4 + +this.A_15_6 + +this.A_15_8;
+    },
+    A_16_10() {
+      return +this.A_16_2 + +this.A_16_4 + +this.A_16_6 + +this.A_16_8;
+    },
+    A_17_10() {
+      return +this.A_17_2 + +this.A_17_4 + +this.A_17_6 + +this.A_17_8;
+    },
+    A_18_10() {
+      return +this.A_18_2 + +this.A_18_4 + +this.A_18_6 + +this.A_18_8;
+    },
+    A_19_10() {
+      return +this.A_19_2 + +this.A_19_4 + +this.A_19_6 + +this.A_19_8;
+    },
+
+    A_1_11() {
+      return +this.A_1_9 + +this.A_1_10;
+    },
+    A_2_11() {
+      return +this.A_2_9 + +this.A_2_10;
+    },
+    A_3_11() {
+      return +this.A_3_9 + +this.A_3_10;
+    },
+    A_4_11() {
+      return +this.A_4_9 + +this.A_4_10;
+    },
+    A_5_11() {
+      return +this.A_5_9 + +this.A_5_10;
+    },
+    A_6_11() {
+      return +this.A_6_9 + +this.A_6_10;
+    },
+    A_7_11() {
+      return +this.A_7_9 + +this.A_7_10;
+    },
+    A_8_11() {
+      return +this.A_8_9 + +this.A_8_10;
+    },
+    A_9a_11() {
+      return +this.A_9a_9 + +this.A_9a_10;
+    },
+    A_9b_11() {
+      return +this.A_9b_9 + +this.A_9b_10;
+    },
+    A_10_11() {
+      return +this.A_10_9 + +this.A_10_10;
+    },
+    A_11_11() {
+      return +this.A_11_9 + +this.A_11_10;
+    },
+    A_12_11() {
+      return +this.A_12_9 + +this.A_12_10;
+    },
+    A_13a_11() {
+      return +this.A_13a_9 + +this.A_13a_10;
+    },
+    A_13b_11() {
+      return +this.A_13b_9 + +this.A_13b_10;
+    },
+    A_13c_11() {
+      return +this.A_13c_9 + +this.A_13c_10;
+    },
+    A_14_11() {
+      return +this.A_14_9 + +this.A_14_10;
+    },
+    A_15_11() {
+      return +this.A_15_9 + +this.A_15_10;
+    },
+    A_16_11() {
+      return +this.A_16_9 + +this.A_16_10;
+    },
+    A_17_11() {
+      return +this.A_17_9 + +this.A_17_10;
+    },
+    A_18_11() {
+      return +this.A_18_9 + +this.A_18_10;
+    },
+    A_19_11() {
+      return +this.A_19_9 + +this.A_19_10;
+    },
+
+    A_1_13() {
+      return +this.A_1_11 - +this.A_1_12;
+    },
+    A_2_13() {
+      return +this.A_2_11 - +this.A_2_12;
+    },
+    A_3_13() {
+      return +this.A_3_11 - +this.A_3_12;
+    },
+    A_4_13() {
+      return +this.A_4_11 - +this.A_4_12;
+    },
+    A_5_13() {
+      return +this.A_5_11 - +this.A_5_12;
+    },
+    A_6_13() {
+      return +this.A_6_11 - +this.A_6_12;
+    },
+    A_7_13() {
+      return +this.A_7_11 - +this.A_7_12;
+    },
+    A_8_13() {
+      return +this.A_8_11 - +this.A_8_12;
+    },
+    A_9a_13() {
+      return +this.A_9a_11 - +this.A_9a_12;
+    },
+    A_9b_13() {
+      return +this.A_9b_11 - +this.A_9b_12;
+    },
+    A_10_13() {
+      return +this.A_10_11 - +this.A_10_12;
+    },
+    A_11_13() {
+      return +this.A_11_11 - +this.A_11_12;
+    },
+    A_12_13() {
+      return +this.A_12_11 - +this.A_12_12;
+    },
+    A_13a_13() {
+      return +this.A_13a_11 - +this.A_13a_12;
+    },
+    A_13b_13() {
+      return +this.A_13b_11 - +this.A_13b_12;
+    },
+    A_13c_13() {
+      return +this.A_13c_11 - +this.A_13c_12;
+    },
+    A_14_13() {
+      return +this.A_14_11 - +this.A_14_12;
+    },
+    A_15_13() {
+      return +this.A_15_11 - +this.A_15_12;
+    },
+    A_16_13() {
+      return +this.A_16_11 - +this.A_16_12;
+    },
+    A_17_13() {
+      return +this.A_17_11 - +this.A_17_12;
+    },
+    A_18_13() {
+      return +this.A_18_11 - +this.A_18_12;
+    },
+    A_19_13() {
+      return +this.A_19_11 - +this.A_19_12;
+    },
+
+    A_1_14() {
+      return (+this.A_1_13 / (1 + this.sl)) * this.sl;
+    },
+    A_2_14() {
+      return (+this.A_2_13 / (1 + this.sl)) * this.sl;
+    },
+    A_3_14() {
+      return (+this.A_3_13 / (1 + this.sl)) * this.sl;
+    },
+    A_4_14() {
+      return (+this.A_4_13 / (1 + this.sl)) * this.sl;
+    },
+    A_5_14() {
+      return (+this.A_5_13 / (1 + this.sl)) * this.sl;
+    },
+    A_6_14() {
+      return (+this.A_6_13 / (1 + this.sl)) * this.sl;
+    },
+    A_7_14() {
+      return (+this.A_7_13 / (1 + this.sl)) * this.sl;
+    },
+    A_8_14() {
+      return (+this.A_8_13 / (1 + this.sl)) * this.sl;
+    },
+    A_9a_14() {
+      return (+this.A_9a_13 / (1 + this.sl)) * this.sl;
+    },
+    A_9b_14() {
+      return (+this.A_9b_13 / (1 + this.sl)) * this.sl;
+    },
+    A_10_14() {
+      return (+this.A_10_13 / (1 + this.sl)) * this.sl;
+    },
+    A_11_14() {
+      return (+this.A_11_13 / (1 + this.sl)) * this.sl;
+    },
+    A_12_14() {
+      return (+this.A_12_13 / (1 + this.sl)) * this.sl;
+    },
+    A_13a_14() {
+      return (+this.A_13a_13 / (1 + this.sl)) * this.sl;
+    },
+    A_13b_14() {
+      return (+this.A_13b_13 / (1 + this.sl)) * this.sl;
+    },
+    A_13c_14() {
+      return (+this.A_13c_13 / (1 + this.sl)) * this.sl;
+    },
+    A_14_14() {
+      return (+this.A_14_13 / (1 + this.sl)) * this.sl;
+    },
+    A_15_14() {
+      return (+this.A_15_13 / (1 + this.sl)) * this.sl;
+    },
+    A_16_14() {
+      return (+this.A_16_13 / (1 + this.sl)) * this.sl;
+    },
+    A_17_14() {
+      return (+this.A_17_13 / (1 + this.sl)) * this.sl;
+    },
+    A_18_14() {
+      return (+this.A_18_13 / (1 + this.sl)) * this.sl;
+    },
+    A_19_14() {
+      return (+this.A_19_13 / (1 + +this.sl)) * this.sl;
+    }
   },
   methods: {
     arraySpanMethod({ row, column, rowIndex, columnIndex }) {
@@ -331,6 +1704,10 @@ table.tftable td {
   padding: 8px;
   border-style: solid;
   border-color: #729ea5;
+}
+
+input {
+  width: 80px;
 }
 </style>
  

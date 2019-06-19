@@ -15,6 +15,10 @@ import Page6 from './views/nav3/Page6.vue'
 import echarts from './views/charts/echarts.vue'
 import mainTable from './views/nssb/mainTable.vue'
 import table1 from './views/nssb/table1.vue'
+import table2 from './views/nssb/table2.vue'
+import table3 from './views/nssb/table3.vue'
+import table4 from './views/nssb/table4.vue'
+
 let routes = [
     {
         path: '/login',
@@ -169,9 +173,9 @@ let routes = [
         children: [
             { path: '/t1', component: mainTable, name: '主表' },
             { path: '/t2', component: table1, name: '附表一' },
-            { path: '/t3', component: echarts, name: '附表二' },
-            { path: '/t4', component: echarts, name: '附表三' },
-            { path: '/t5', component: echarts, name: '附表四' },
+            { path: '/t3', component: table2, name: '附表二' },
+            { path: '/t4', component: table3, name: '附表三' },
+            { path: '/t5', component: table4, name: '附表四' },
         ]
     },
     {
