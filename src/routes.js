@@ -32,6 +32,19 @@ let routes = [
         name: '',
         hidden: true
     },
+    {
+        path: '/',
+        component: Home,
+        name: '纳税申报',
+        iconCls: 'fa fa-bar-chart',
+        children: [
+            { path: '/t1', component: mainTable, name: '主表' },
+            { path: '/t2', component: table1, name: '附表一' },
+            { path: '/t3', component: table2, name: '附表二' },
+            { path: '/t4', component: table3, name: '附表三' },
+            { path: '/t5', component: table4, name: '附表四' },
+        ]
+    },
     //{ path: '/main', component: Main },
     {
         path: '/',
@@ -163,19 +176,6 @@ let routes = [
             { path: '/xxx', component: Page4, name: '非贸付汇合同基本信息管理' } ,
             { path: '/zzz', component: Page4, name: '代扣代缴支付台账管理' } ,
             { path: '/aaa', component: Page4, name: '代缴代缴申报管理' } ,
-        ]
-    },
-    {
-        path: '/',
-        component: Home,
-        name: '纳税申报',
-        iconCls: 'fa fa-bar-chart',
-        children: [
-            { path: '/t1', component: mainTable, name: '主表' },
-            { path: '/t2', component: table1, name: '附表一' },
-            { path: '/t3', component: table2, name: '附表二' },
-            { path: '/t4', component: table3, name: '附表三' },
-            { path: '/t5', component: table4, name: '附表四' },
         ]
     },
     {
